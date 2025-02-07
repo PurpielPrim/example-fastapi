@@ -9,9 +9,7 @@ from .routers import post, user, auth, vote
 
 app = FastAPI()
 
-origins = [
-    "*",
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -29,7 +27,7 @@ app.include_router(vote.router)
 #pierwszyziomek
 @app.get("/")
 def root():
-    return {"message": "test"}
+    return {"message": "Hello worlda"}
 
 
 
